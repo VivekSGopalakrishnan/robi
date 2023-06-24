@@ -4,21 +4,17 @@
 
 import useSpline from '@splinetool/r3f-spline'
 import { OrthographicCamera } from '@react-three/drei'
-import { useRef, useState } from 'react';
-import { useFrame } from 'react-three-fiber';
-import { SpotLightHelper , SpotLight } from 'three';
-export default function Scene({ ...props }) {
-  const [pos,setPos] = useState('')
-  const { nodes, materials } = useSpline('https://prod.spline.design/5iOG-WBGIXAKZgqD/scene.splinecode')
 
+export default function Scene({ ...props }) {
+  const { nodes, materials } = useSpline('https://prod.spline.design/l3I-q-lrrwVXGals/scene.splinecode')
   return (
     <>
-      <color attach="background" args={['#f5f1ee']} />
+      <color attach="background" args={['#8e8f8e']} />
       <group {...props} dispose={null}>
-      <directionalLight
+        <directionalLight
           name="Directional Light"
           castShadow
-          intensity={0.8}
+          intensity={0.5}
           shadow-mapSize-width={4096}
           shadow-mapSize-height={4096}
           shadow-camera-near={-10000}
@@ -27,7 +23,7 @@ export default function Scene({ ...props }) {
           shadow-camera-right={1299.8485}
           shadow-camera-top={1299.8485}
           shadow-camera-bottom={-1299.8485}
-          color="#f2e6db"
+          color="white"
           position={[-576, 1249.29, 683.88]}
         />
         <mesh
@@ -36,15 +32,11 @@ export default function Scene({ ...props }) {
           material={materials['Floor Material']}
           castShadow
           receiveShadow
-          position={[0, -410, 0]}
+          position={[0, -199.71, 0]}
           rotation={[-Math.PI / 2, 0, 0]}
           scale={1}
         />
-        
-     
-        <group name="geo" position={[0, 200, -600]}
-       
-       >
+        <group name="geo" position={[0, 200, -600]}>
           <mesh
             name="Sphere"
             geometry={nodes.Sphere.geometry}
@@ -1325,7 +1317,7 @@ export default function Scene({ ...props }) {
             <mesh
               name="Cube 56"
               geometry={nodes['Cube 56'].geometry}
-              material={materials['Color 1']}
+              material={materials['Color 3']}
               castShadow
               receiveShadow
               position={[4.44, 1.62, 5.54]}
@@ -1392,7 +1384,7 @@ export default function Scene({ ...props }) {
             <mesh
               name="Cube 57"
               geometry={nodes['Cube 57'].geometry}
-              material={materials['Color 1']}
+              material={materials['Color 3']}
               castShadow
               receiveShadow
               position={[4.44, 1.62, 5.54]}
@@ -1459,7 +1451,7 @@ export default function Scene({ ...props }) {
             <mesh
               name="Cube 58"
               geometry={nodes['Cube 58'].geometry}
-              material={materials['Color 1']}
+              material={materials['Color 3']}
               castShadow
               receiveShadow
               position={[4.44, 1.62, 5.54]}
@@ -1521,7 +1513,7 @@ export default function Scene({ ...props }) {
             <mesh
               name="Cube 59"
               geometry={nodes['Cube 59'].geometry}
-              material={materials['Color 1']}
+              material={materials['Color 3']}
               castShadow
               receiveShadow
               position={[4.44, 1.62, 5.54]}
@@ -1580,7 +1572,16 @@ export default function Scene({ ...props }) {
             />
           </group>
         </group>
-       
+        <OrthographicCamera
+          name="1"
+          makeDefault={true}
+          zoom={0.49}
+          far={100000}
+          near={-100000}
+          position={[598.18, 652.29, 594.25]}
+          rotation={[-0.41, 0.53, 0.22]}
+        />
+        <hemisphereLight name="Default Ambient Light" intensity={0.75} color="#eaeaea" />
       </group>
     </>
   )
