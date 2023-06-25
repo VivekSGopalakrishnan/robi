@@ -13,7 +13,7 @@ export default function Scene({ ...props }) {
 
   return (
     <>
-      <color attach="background" args={['#f5f1ee']} />
+      <color attach="background" args={['#eae7e3']} />
       <group {...props} dispose={null}>
       <directionalLight
           name="Directional Light"
@@ -1580,7 +1580,7 @@ export default function Scene({ ...props }) {
             />
           </group>
         </group>
-       
+        <hemisphereLight name="Default Ambient Light" intensity={0.35} color="#eaeaea" />
       </group>
     </>
   )

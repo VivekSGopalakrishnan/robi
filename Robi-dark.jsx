@@ -9,7 +9,7 @@ export default function Scene({ ...props }) {
   const { nodes, materials } = useSpline('https://prod.spline.design/l3I-q-lrrwVXGals/scene.splinecode')
   return (
     <>
-      <color attach="background" args={['#8e8f8e']} />
+      <color attach="background" args={['#727272']} />
       <group {...props} dispose={null}>
         <directionalLight
           name="Directional Light"
@@ -32,7 +32,7 @@ export default function Scene({ ...props }) {
           material={materials['Floor Material']}
           castShadow
           receiveShadow
-          position={[0, -199.71, 0]}
+          position={[0, -410, 0]}
           rotation={[-Math.PI / 2, 0, 0]}
           scale={1}
         />
@@ -1572,16 +1572,8 @@ export default function Scene({ ...props }) {
             />
           </group>
         </group>
-        <OrthographicCamera
-          name="1"
-          makeDefault={true}
-          zoom={0.49}
-          far={100000}
-          near={-100000}
-          position={[598.18, 652.29, 594.25]}
-          rotation={[-0.41, 0.53, 0.22]}
-        />
-        <hemisphereLight name="Default Ambient Light" intensity={0.75} color="#eaeaea" />
+        
+        <hemisphereLight name="Default Ambient Light" intensity={0.25} color="#eaeaea" />
       </group>
     </>
   )
