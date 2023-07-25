@@ -1,0 +1,36 @@
+.resume{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+   
+    z-index: 0;
+    overflow-x: hidden;
+}
+.res-content{
+    font-family: 'ml';
+    font-size: 30px;
+    margin-top: 500px;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.res-download{
+    margin-bottom: 30px;
+    border-radius: 20px;
+    font-family: 'mm';
+}
+.right-res img{
+    width: 100%;
+    margin-right: 100px;
+}
+.res{
+    display: flex;
+    justify-content: center;
+}
+@media (max-width:425px) {
+    .right-res img{
+        margin-right: 0;
+    }
+}

@@ -1,7 +1,37 @@
 .home{
-    position: absolute;
     height: 100vh;
     z-index: 100;
-    font-family: 'Times New Roman', Times, serif;
+}
+.home-content{
+    position: absolute;
+    margin-top: 100px;
     font-size: 40px;
+    font-family: 'msb';
+    margin-left: 100px;
+}
+.home-name{
+    font-family: 'mm';
+    font-size: 35px;
+}
+.home-foot{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'ml';
+}
+
+@media (max-width:450px) {
+    .home-content{
+        font-size: 24px;
+        margin-left: 10px;
+        margin-top: 70px;
+    }
+    .home-name{
+        font-size: 22px;
+        margin-top: 10px;
+    }
 }

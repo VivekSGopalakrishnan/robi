@@ -1,9 +1,32 @@
 *{
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
+
 .asd{
   position: absolute;
   margin-top: 100px;
   z-index: 100;
+}
+
+@font-face {
+  font-family: 'mb';
+  src: url('/src/assets/Montserrat-Bold.otf');
+}
+@font-face {
+  font-family: 'msb';
+  src: url('/src/assets/Montserrat-SemiBold.otf');
+}
+@font-face {
+  font-family: 'meb';
+  src: url('/src/assets/Montserrat-ExtraBold.otf');
+}
+@font-face {
+  font-family: 'mm';
+  src: url('/src/assets/Montserrat-Medium.otf');
+}
+@font-face {
+  font-family: 'ml';
+  src: url('/src/assets/Montserrat-Light.otf');
 }

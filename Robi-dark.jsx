@@ -5,12 +5,29 @@
 import useSpline from '@splinetool/r3f-spline'
 import { OrthographicCamera } from '@react-three/drei'
 
+import {gsap} from 'gsap'
+import { useEffect , useRef } from 'react';
+
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 export default function Scene({ ...props }) {
+  const objectRef = useRef();
   const { nodes, materials } = useSpline('https://prod.spline.design/l3I-q-lrrwVXGals/scene.splinecode')
+  useEffect(() => {
+    const object = objectRef.current;
+  gsap.to(object.rotation, {
+    y: Math.PI * 3,
+    scrollTrigger: {
+      trigger: 'home-foot', 
+      scrub: 1,
+      start: 'top center', 
+      end: 'bottom center',
+    },})
+  },[]);
   return (
     <>
       <color attach="background" args={['#727272']} />
-      <group {...props} dispose={null}>
+      <group ref={objectRef} {...props} dispose={null}>
         <directionalLight
           name="Directional Light"
           castShadow

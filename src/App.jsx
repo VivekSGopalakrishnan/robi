@@ -5,8 +5,9 @@ import Landing from './Landing/Landing'
 import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import theme from './styles/Theme';
-
-
+import {PiSunDim} from 'react-icons/pi'
+import {BsMoon} from 'react-icons/bs'
+import Res from './resume/Res';
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const AppContainer = styled.div`
@@ -15,19 +16,16 @@ const App = () => {
   `;
 
   const ToggleButton = styled.div`
-    background-color: #000000;
+    width:20px;
 
     color: #ffffff;
-    position: absolute;
     right: 0;
     margin-right:20px; 
-    margin-top:20px; 
-    padding: 5px 15px 5px 15px;
-    border-radius:20px;
-    font-size:20px;
-    font-weight:500;
+    margin-top:20px;
+    position:absolute;
+    padding: 5px 20px 5px 15px;
 
-    z-index:100;
+    z-index:200;
   `;
 
   const toggleDarkMode = () => {
@@ -38,9 +36,10 @@ const App = () => {
     <>
       <ThemeProvider theme={isDarkMode ? theme.dark : theme.light}>
         <AppContainer>
-          <Home />
-          <ToggleButton onClick={toggleDarkMode}>{isDarkMode ? 'Dark' : 'Light'}</ToggleButton>
+          <ToggleButton onClick={toggleDarkMode}>{isDarkMode ?<PiSunDim size={35}/> : <BsMoon size={30} color='#000000'/>}</ToggleButton>
           <Landing isDarkMode={isDarkMode} />
+          <Home />
+          <Res/>
         </AppContainer>
       </ThemeProvider>
     </>

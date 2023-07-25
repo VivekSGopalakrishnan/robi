@@ -4,6 +4,7 @@ import { OrbitControls, OrthographicCamera, } from '@react-three/drei'
 import theme from '../styles/Theme'
 import Robi from "../../Robi"
 import Robid from "../../Robi-dark"
+import './Landing.css'
 
 const Landing = ({isDarkMode}) => {
 
@@ -15,6 +16,7 @@ const Landing = ({isDarkMode}) => {
           shadows>
 
           <OrbitControls
+          enableZoom={false}
 
           />
           <OrthographicCamera
@@ -23,7 +25,7 @@ const Landing = ({isDarkMode}) => {
             zoom={0.30}
             far={100000}
             near={-100000}
-            position={[700, 624.2, 500]}
+            position={[1000, 200, 0]}
             rotation={[-0.39, 0.6, 0.23]}
             scale={1}
           />
