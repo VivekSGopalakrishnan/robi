@@ -25,7 +25,7 @@ const Landing = ({isDarkMode}) => {
             zoom={0.30}
             far={100000}
             near={-100000}
-            position={[1000, 200, 0]}
+            position={[1000, 500, 2000]}
             rotation={[-0.39, 0.6, 0.23]}
             scale={1}
           />

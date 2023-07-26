@@ -10,8 +10,8 @@
 }
 .res-content{
     font-family: 'ml';
-    font-size: 30px;
-    margin-top: 500px;
+    font-size: 56px;
+    margin-top: 250vh;
     width: 100vw;
     text-align: center;
     margin-bottom: 30px;
@@ -29,8 +29,12 @@
     display: flex;
     justify-content: center;
 }
-@media (max-width:425px) {
+@media (max-width:475px) {
     .right-res img{
         margin-right: 0;
     }
+    .res-content{
+        font-size: 30px;
+    }
+
 }

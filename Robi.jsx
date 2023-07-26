@@ -21,9 +21,9 @@ export default function Scene({ ...props }) {
   useEffect(() => {
     const object = objectRef.current;
   gsap.to(object.rotation, {
-    y: Math.PI * 3,
+    y: Math.PI * 4,
     scrollTrigger: {
-      trigger: 'home-foot', 
+      trigger: '.home', 
       scrub: 1,
       start: 'top center', 
       end: 'bottom center',
