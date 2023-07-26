@@ -27,6 +27,7 @@
 .me-des{
     position: absolute;
     margin-top: 265vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

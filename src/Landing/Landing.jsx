@@ -17,6 +17,8 @@ const Landing = ({isDarkMode}) => {
 
           <OrbitControls
           enableZoom={false}
+          enablePan={false}
+          enableRotate={false}
 
           />
           <OrthographicCamera
