@@ -17,7 +17,7 @@ const Home = () => {
           { opacity: 0 },
           {
             opacity: 1,
-            duration: 1,
+            duration: 2,
             scrollTrigger: {
               trigger: element,
               start: 'top 70%', // Adjust the scroll trigger start position as needed
@@ -26,9 +26,12 @@ const Home = () => {
             },
           }
         );
-      });
+      }
+      );
     }
     animateFadeIn();
+
+    
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());

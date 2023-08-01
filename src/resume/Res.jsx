@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './Res.css'
-import resume from '../assets/resume-3.svg'
+import resume from '../assets/resume-6.svg'
 import styled from 'styled-components';
 const Res = () => {
     const Res1 = styled.div`
